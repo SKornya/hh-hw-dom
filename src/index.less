@@ -1,0 +1,57 @@
+@bg-color: hsl(195, 53%, 85%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+.zone {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+
+  overflow: hidden;
+}
+
+.start-zone {
+  width: 200px;
+  height: 200px;
+
+  background: @bg-color url('../public/start_background.svg');
+  background-blend-mode: darken;
+}
+
+.output-container {
+  display: flex;
+}
+
+.align-zone, .free-zone {
+  width: 500px;
+  height: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: start;
+}
+
+.align-zone {
+  background: @bg-color url('../public/align_background.svg');
+}
+
+.free-zone {
+  position: relative;
+  background: @bg-color url('../public/free_background.svg');
+}
+
+.element {
+  position: absolute;
+
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+}
